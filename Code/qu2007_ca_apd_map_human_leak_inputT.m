@@ -1,5 +1,4 @@
-function [a,r,cp,u,l,b,c,s]= qu2007_ca_apd_map_human_leak_inputT(beats_std, ...
-    T, nu0,fleak0,hflag,Tscale,beta0,Nscale,Fscale,Bscale,delta)
+function [a,r,cp,u,l,b,c,s]= qu2007_ca_apd_map_human_leak_inputT(beats_std, T, nu0,fleak0,hflag,Tscale,beta0,Nscale,Fscale,Bscale,delta)
 
 % delta = scaling factor for SR leak
 
@@ -75,15 +74,15 @@ c = c(beats_std:n);
 s = s(beats_std:n);
 
 % remove zero values
-% index = find(a~=0);
-% a = a(index);
-% r = r(index);
-% cp = cp(index);
-% u = u(index);
-% l = l(index);
-% b = b(index);
-% c = c(index);
-% s = s(index);
+index = find(a~=0);
+a = a(index);
+r = r(index);
+cp = cp(index);
+u = u(index);
+l = l(index);
+b = b(index);
+c = c(index);
+s = s(index);
 
 
 function f = ffun(d,hflag)
